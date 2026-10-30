@@ -1,4 +1,7 @@
-<div class="workspace-shell">
+<div class="workspace-shell"
+  [class.sidebar-collapsed]="isSidebarCollapsed"
+  [class.sidebar-open]="isSidebarOpen">
+  <button class="sidebar-backdrop" type="button" aria-label="Close navigation menu" (click)="closeSidebar()"></button>
   <aside class="workspace-sidebar">
     <a class="brand-lockup" href="/admin/client-list" aria-label="Storlane home">
       <span class="brand-mark" aria-hidden="true">
@@ -38,7 +41,7 @@
         </svg>
         <span>Overview</span>
       </a>
-      <a class="nav-item" href="#warehouses" title="Warehouses">
+      <a class="nav-item" routerLink="/admin/warehouse-list" title="Warehouses">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="m3 10 9-6 9 6v10H3V10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
           <path d="M8 20v-7h8v7M7 10h.01M12 10h.01M17 10h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
@@ -101,6 +104,12 @@
         </svg>
         <span>Settings</span>
       </a>
+      <button class="nav-item logout-button" type="button" title="Log out" aria-label="Log out" (click)="logout()">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M10 4H5.5A1.5 1.5 0 0 0 4 5.5v13A1.5 1.5 0 0 0 5.5 20H10M14 16l4-4-4-4M18 12H9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Log out</span>
+      </button>
       <div class="sidebar-divider"></div>
       <div class="sidebar-profile">
         <span class="profile-avatar sidebar-avatar">AM</span>
@@ -115,8 +124,17 @@
 
   <div class="workspace-main">
     <header class="workspace-topbar">
+      <button
+        class="sidebar-toggle"
+        type="button"
+        aria-label="Toggle sidebar"
+        [attr.aria-expanded]="isSidebarExpanded"
+        (click)="toggleSidebar()">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+      </button>
       <div class="topbar-heading">
-        <div class="breadcrumbs"><span>Workspace</span><span class="breadcrumb-separator">/</span><strong>Clients</strong></div>
         <span class="topbar-subtitle">Manage your customer relationships</span>
       </div>
       <div class="topbar-actions">
@@ -152,6 +170,14 @@
 
       </div>
     </header>
+
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <div class="breadcrumbs">
+        <span>Workspace</span>
+        <span class="breadcrumb-separator">/</span>
+        <strong>Clients</strong>
+      </div>
+    </nav>
 
     <main class="workspace-content">
       <router-outlet></router-outlet>

@@ -8,10 +8,10 @@ export interface IEmployeeLoginResponse {
   token: string
   tokenType: string
   expiresAtUtc: string
-  employee: Employee
+  employee: IEmployee
 }
 
-export interface Employee {
+export interface IEmployee {
   id: number
   name: string
   userName: string
