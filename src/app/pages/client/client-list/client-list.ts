@@ -16,7 +16,7 @@ export class ClientList implements OnInit, OnDestroy{
 
   subscription! : Subscription;
 
-  clientList : WritableSignal<ClientModel[]> = signal<ClientModel[]>([]);
+  // clientList : WritableSignal<ClientModel[]> = signal<ClientModel[]>([]);
 
   ngOnInit(): void {
     this.getAllClient();
@@ -25,6 +25,6 @@ export class ClientList implements OnInit, OnDestroy{
      
   }
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    // this.subscription.unsubscribe();
   }
 }
