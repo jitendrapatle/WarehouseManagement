@@ -1,0 +1,13 @@
+@if (toastSrv.toast) {
+
+  
+  <div 
+  class="toast-message" 
+  [ngClass]="'toast-'+ toastSrv.toast.type"
+  role="alert">
+    <span> {{toastSrv.toast.message}} </span>
+    
+    <button type="button" class="btn-close" (click)="toastSrv.clear()" aria-label="Close"></button>
+  </div>
+  
+}

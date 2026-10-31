@@ -1,5 +1,5 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { IEmployee } from '../models/interface/common.model';
+import { IEmployee, IEmployeeLoginResponse } from '../models/interface/common.model';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,10 @@ export class AuthStore {
   readonly accessToken = this._accessToken.asReadonly();
 
   readonly isLoggedIn = computed(()=>{
-    !!this.accessToken()
+    !!this._accessToken()
   })
 
+  setSassion(response:IEmployeeLoginResponse){
+
+  }
 }

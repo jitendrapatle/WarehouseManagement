@@ -21,7 +21,7 @@ export class Layout {
   }
 
   constructor(){
-    const loggeinLocalData = localStorage.getItem(GLOBAL_CONSTANT.Local_Storage_Login_Key);
+    const loggeinLocalData = localStorage.getItem(GLOBAL_CONSTANT.Local_Storage_Login_User);
 
     if(loggeinLocalData != null){
       const LoggedInRawData:IEmployeeLoginResponse = JSON.parse(loggeinLocalData)
@@ -30,7 +30,7 @@ export class Layout {
   }
 
   logout(): void {
-    localStorage.removeItem(GLOBAL_CONSTANT.Local_Storage_Login_Key);
+    localStorage.removeItem(GLOBAL_CONSTANT.Local_Storage_Login_User);
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
   }

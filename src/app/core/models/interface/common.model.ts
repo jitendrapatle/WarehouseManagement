@@ -1,7 +1,7 @@
-export interface API_RESPONSE{
+export interface API_RESPONSE<T>{
   message :  string;
   result: boolean;
-  data: any
+  data: T
 }
 
 export interface IEmployeeLoginResponse {
