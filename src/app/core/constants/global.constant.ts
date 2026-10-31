@@ -26,5 +26,6 @@ export const GLOBAL_CONSTANT = {
     GET_WAREHOUSE_ROOM_DASHBOARD: 'GetWarehouseRoomDashboard/{warehouseId}',
     GET_OWNER_DASHBOARD: 'GetOwnerDashboard',
   },
-  Local_Storage_Login_Key: 'loggedInUser',
+  Local_Storage_Login_User: 'loggedInUser',
+  Local_Storage_Login_Token: 'token',
 };
