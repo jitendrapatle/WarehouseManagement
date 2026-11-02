@@ -73,13 +73,13 @@
 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form" >
           <div class="mb-4">
-            <label class="form-label" for="work-email">Work email</label>
+            <label class="form-label" for="userName">Work email</label>
             <div class="input-wrap">
               <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <rect x="2.5" y="4" width="15" height="12" rx="2" stroke="currentColor" stroke-width="1.5" />
                 <path d="m3.5 5 6.5 5 6.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <input class="form-control" formControlName="userName" autocomplete="username" />
+              <input class="form-control" formControlName="userName"  id="userName" autocomplete="userName" placeholder="Enter your user name"/>
               
             </div>
           </div>
@@ -94,8 +94,11 @@
                 <rect x="3.5" y="8" width="13" height="9" rx="2" stroke="currentColor" stroke-width="1.5" />
                 <path d="M6.5 8V5.5a3.5 3.5 0 1 1 7 0V8M10 11.5v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
               </svg>
-              <input class="form-control" formControlName="password" type="password" placeholder="Enter your password" autocomplete="current-password" />
+              <input class="form-control" formControlName="password"  id="account-password" type="password" placeholder="Enter your password" autocomplete="current-password" />
             </div>
+            @if (this.loginForm.get('password')?.invalid && this.loginForm.get('password')?.touched) {
+              <p>Min 8 char</p>
+            }
           </div>
 
           <div class="form-check remember-check">
@@ -107,49 +110,13 @@
             <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
               <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+            @if (isSpinnerLoading()) {
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            }
           </button>
         </form>
-
-        ---------------
-        <!-- <form class="login-form" >
-          <div class="mb-4">
-            <label class="form-label" for="work-email">Work email</label>
-            <div class="input-wrap">
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <rect x="2.5" y="4" width="15" height="12" rx="2" stroke="currentColor" stroke-width="1.5" />
-                <path d="m3.5 5 6.5 5 6.5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-              <input class="form-control" [(ngModel)]="loginObj.userName" id="work-email" name="userName" type="email" placeholder="you@company.com" autocomplete="username" />
-              
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <div class="label-row">
-              <label class="form-label" for="account-password">Password</label>
-              <a class="text-link" href="#forgot-password">Forgot password?</a>
-            </div>
-            <div class="input-wrap">
-              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <rect x="3.5" y="8" width="13" height="9" rx="2" stroke="currentColor" stroke-width="1.5" />
-                <path d="M6.5 8V5.5a3.5 3.5 0 1 1 7 0V8M10 11.5v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-              </svg>
-              <input class="form-control" [(ngModel)]="loginObj.password" id="account-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" />
-            </div>
-          </div>
-
-          <div class="form-check remember-check">
-            <input class="form-check-input" id="remember-me" name="remember-me" type="checkbox" />
-            <label class="form-check-label" for="remember-me">Keep me signed in</label>
-          </div>
-
-          <button [disabled]="loginObj.userName == '' || loginObj.password == ''" class="btn sign-in-button w-100" type="button" (click)="onLogin()">
-            Sign in
-            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-        </form> -->
 
         <div class="security-note">
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">

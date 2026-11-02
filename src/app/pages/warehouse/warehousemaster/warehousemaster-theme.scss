@@ -28,7 +28,7 @@ app-warehousemaster {
 .page-eyebrow,
 .modal-kicker {
   color: #82909c;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 750;
   letter-spacing: 1.15px;
 }
@@ -54,7 +54,7 @@ app-warehousemaster {
 .panel-heading p {
   margin: 0;
   color: #7d8b98;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .add-warehouse-btn,
@@ -67,7 +67,7 @@ app-warehousemaster {
   border-radius: 7px;
   color: #fff;
   background: #172f40;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
   transition: background .18s ease, box-shadow .18s ease, transform .18s ease;
@@ -109,6 +109,13 @@ app-warehousemaster {
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 2px 6px rgba(22, 43, 58, .025);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.stat-card:not(.stat-card-primary):hover {
+  transform: translateY(-2px);
+  border-color: #cfe5e1;
+  box-shadow: 0 10px 24px rgba(22, 63, 72, .08);
 }
 
 .stat-card-primary {
@@ -155,7 +162,7 @@ app-warehousemaster {
 
 .stat-trend {
   color: #7f8e9b;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .stat-card-primary .stat-trend {
@@ -199,7 +206,7 @@ app-warehousemaster {
 
 .stat-label {
   color: #788795;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .stat-card-primary .stat-label,
@@ -224,7 +231,7 @@ app-warehousemaster {
 
 .stat-value small {
   color: #8b98a4;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0;
 }
@@ -236,7 +243,7 @@ app-warehousemaster {
 .stat-footnote {
   margin-top: 5px;
   color: #95a0aa;
-  font-size: 8px;
+  font-size: 11px;
 }
 
 .stat-decoration {
@@ -291,7 +298,7 @@ app-warehousemaster {
   gap: 8px;
   margin: 0 0 4px;
   color: #24394b;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -300,11 +307,11 @@ app-warehousemaster {
   border-radius: 5px;
   color: #168f81;
   background: #eaf6f3;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .panel-heading p {
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .export-button,
@@ -319,7 +326,7 @@ app-warehousemaster {
   border-radius: 6px;
   color: #5d6e7d;
   background: #fff;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 550;
   cursor: pointer;
   transition: border-color .16s ease, color .16s ease, background .16s ease;
@@ -373,7 +380,7 @@ app-warehousemaster {
   color: #394d5e;
   background: transparent;
   font: inherit;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .warehouse-search input::placeholder {
@@ -402,7 +409,7 @@ app-warehousemaster {
   padding: 0 12px;
   color: #8996a1;
   background: #fbfcfd;
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: .75px;
   text-align: left;
@@ -424,7 +431,12 @@ app-warehousemaster {
   padding: 8px 12px;
   border-top: 1px solid #f0f2f4;
   color: #46596a;
-  font-size: 9px;
+  font-size: 12px;
+  transition: background .15s ease;
+}
+
+.warehouse-table tbody tr:hover td {
+  background: #f8fbfb;
 }
 
 .warehouse-name-cell {
@@ -474,7 +486,7 @@ app-warehousemaster {
 .warehouse-title strong,
 .location-name {
   color: #304558;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 650;
 }
 
@@ -484,12 +496,12 @@ app-warehousemaster {
   display: block;
   margin-top: 4px;
   color: #97a2ac;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .area-value {
   color: #394d5e;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 650;
 }
 
@@ -505,7 +517,7 @@ app-warehousemaster {
   gap: 6px;
   padding: 5px 7px;
   border-radius: 5px;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 600;
 }
 
@@ -578,7 +590,7 @@ app-warehousemaster {
   padding: 8px 18px;
   border-top: 1px solid #edf0f2;
   color: #7d8a96;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .table-footer strong {
@@ -702,7 +714,7 @@ app-warehousemaster {
 
 .modal-kicker {
   color: #168f81;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .modal-header h2 {
@@ -740,7 +752,7 @@ app-warehousemaster {
   gap: 4px;
   margin-bottom: 6px;
   color: #344a5c;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 650;
 }
 
@@ -751,7 +763,7 @@ app-warehousemaster {
 .form-field label small {
   margin-left: auto;
   color: #a1abb3;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: .6px;
 }
@@ -766,7 +778,7 @@ app-warehousemaster {
   color: #344a5c;
   background: #fff;
   font: inherit;
-  font-size: 9px;
+  font-size: 13px;
   transition: border-color .16s ease, box-shadow .16s ease;
 }
 
@@ -792,7 +804,7 @@ app-warehousemaster {
   top: 50%;
   right: 10px;
   color: #8a97a2;
-  font-size: 8px;
+  font-size: 11px;
   transform: translateY(-50%);
 }
 
@@ -836,13 +848,13 @@ app-warehousemaster {
 
 .cold-toggle-copy strong {
   color: #34495b;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 650;
 }
 
 .cold-toggle-copy small {
   color: #8c99a3;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .cold-storage-toggle input {
@@ -901,7 +913,7 @@ app-warehousemaster {
 .save-button {
   min-height: 36px;
   padding: 0 13px;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .cancel-button {
@@ -955,7 +967,7 @@ app-warehousemaster {
   margin: 0 auto;
   max-width: 290px;
   color: #7f8c97;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -972,7 +984,7 @@ app-warehousemaster {
   border-radius: 6px;
   color: #fff;
   background: #c65e50;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -1051,7 +1063,7 @@ app-warehousemaster {
   }
 
   .stat-trend {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .stat-value {
@@ -1059,7 +1071,7 @@ app-warehousemaster {
   }
 
   .stat-value small {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .panel-heading {

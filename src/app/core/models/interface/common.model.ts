@@ -19,3 +19,7 @@ export interface IEmployee {
   warehouseAssignedId: number
   warehouseName: string
 }
+export interface ILoginData{
+  userName: string | null
+  password : string | null
+}

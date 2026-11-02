@@ -1,0 +1,89 @@
+
+.section-not-found {
+    background: url("https://codingyaar.com/wp-content/uploads/dots-bg.png");
+    align-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+.section-not-found .not-found-header,
+.section-not-found .not-found-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    font-size: .875rem;
+    line-height: 1.2;
+    color: hsla(38, 22%, 7%, 0.3);
+    text-transform: uppercase;
+}
+.section-not-found .not-found-header span:last-child {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: hsla(38, 22%, 7%, 0.3);
+}
+.section-not-found .not-found-wrapper {
+    max-width: 32rem;
+    margin-inline: auto;
+    padding-block: 6rem;
+}
+.section-not-found .not-found-wrapper img {
+    width: 100%;
+}
+.section-not-found hr {
+    margin-top: 4rem;
+    margin-bottom: 2.25rem;
+    width: 40%;
+    margin-inline: auto;
+}
+.section-not-found .not-found-body {
+    max-width: 20rem;
+    margin-inline: auto;
+}
+.section-not-found .not-found-body h2 {
+    font-weight: 400;
+    font-size: 1.625rem;
+    line-height: 1.3;
+    letter-spacing: -0.26px;
+}
+.section-not-found .not-found-body p {
+    margin-top: .875rem;
+    line-height: 1.5;
+    letter-spacing: 0.13px;
+    color: hsla(40, 10%, 49%, 1);
+    font-weight: 300;
+}
+.section-not-found .links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+.section-not-found .links-wrapper a {
+    font-size: .875rem;
+    line-height: 1.3;
+    letter-spacing: 2.16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: hsla(40, 10%, 49%, 1);
+}
+.section-not-found .links-wrapper a:first-child {
+    color: hsla(38, 22%, 7%, 1);
+    position: relative;
+    padding-left: 2.25rem;
+}
+.section-not-found .links-wrapper a:first-child::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    width: 1.5rem;
+    height: 1px;
+    background-color: hsla(143, 25%, 24%, 1);
+}
+.section-not-found .links-wrapper a:last-child {
+    padding-left: 1.5rem;
+    border-left: 1px solid hsla(38, 22%, 7%, 0.3);
+}

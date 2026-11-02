@@ -31,6 +31,8 @@ export class AuthService {
         environment.API_URL + GLOBAL_CONSTANT.API_METHODS.LOGIN,
         obj,
       )
-      .pipe(tap((res: any) => {}));
+      .pipe(tap((res: any) => {
+        
+      }));
   }
 }

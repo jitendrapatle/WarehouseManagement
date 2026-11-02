@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core'; 
+import { Injectable, signal } from '@angular/core'; 
 
 
 export interface IToast {
@@ -10,15 +10,12 @@ export interface IToast {
   providedIn: 'root',
 })
 export class ToastService {
-  toast:IToast | null = null;
+  toast = signal<IToast | null>(null)
 
   show(message:string , type: IToast['type']) : void{
-    this.toast = {
-      message: message,
-      type: type
-    }
+    this.toast.set({message,type})
     setTimeout(()=>{
-      this.toast = null;
+      this.toast.set(null);
     },3000)
   }
 
@@ -36,7 +33,7 @@ export class ToastService {
   }
 
   clear():void{
-    this.toast = null;
+    this.toast.set(null)
   }
 
 }

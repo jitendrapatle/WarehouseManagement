@@ -7,6 +7,7 @@ import { authGuard } from './core/guards/auth-guard';
 import { AddCustomer } from './pages/customer/add-customer/add-customer';
 import { CustomerList } from './pages/customer/customer-list/customer-list';
 import { Warehousemaster } from './pages/warehouse/warehousemaster/warehousemaster';
+import { PageNotFound } from './pages/page-not-found/page-not-found';
 
 export const routes: Routes = [
   {
@@ -19,9 +20,13 @@ export const routes: Routes = [
     component: Login
   },
   {
+    path: 'page-not-found',
+    component: PageNotFound
+  },
+  {
     path: 'admin',
     component:Layout,
-    // canActivate: [authGuard],
+    canActivate: [authGuard],
     children:[
       {
         path: 'client-list',
@@ -42,13 +47,13 @@ export const routes: Routes = [
       {
         path: 'warehouse-list',
         component: Warehousemaster
-      },
+      }
       
     ]
   },
   {
     path: '**',
-    redirectTo: 'login'
+    redirectTo: 'page-not-found'
   }
   
 ];
