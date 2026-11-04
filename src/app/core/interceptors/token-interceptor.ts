@@ -17,6 +17,7 @@ export const tokenInterceptor: HttpInterceptorFn = (req, next) => {
   return next(cloneRequest).pipe(
     catchError((err: HttpErrorResponse) => {
     // here we can catch error globally
+    debugger;
     switch (err.status) {
       case 400:
         console.error('Bad Request');

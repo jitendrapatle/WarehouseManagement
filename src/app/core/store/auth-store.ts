@@ -16,6 +16,7 @@ export class AuthStore {
   })
 
   setSassion(response:IEmployeeLoginResponse){
-
+    this._accessToken.set(response.token);
+    this._currentUser.set(response.employee)
   }
 }

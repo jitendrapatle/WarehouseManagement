@@ -22,7 +22,7 @@ export class AuthService {
     !!this._accesstoken;
   })
  
-  
+
 
   loginUser(obj: UserLoginModel): Observable<API_RESPONSE<IEmployeeLoginResponse>> {
     debugger;
@@ -32,8 +32,9 @@ export class AuthService {
         environment.API_URL + GLOBAL_CONSTANT.API_METHODS.LOGIN,
         obj,
       )
-      .pipe(tap((res: any) => {
-        
+      .pipe(tap((res: API_RESPONSE<IEmployeeLoginResponse>) => {
+          console.log(res);
+          
       }));
   }
 }

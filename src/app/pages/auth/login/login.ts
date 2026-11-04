@@ -49,7 +49,7 @@ export class Login {
             GLOBAL_CONSTANT.Local_Storage_Login_User,
             JSON.stringify(res.data.employee),
           );
-          localStorage.setItem(GLOBAL_CONSTANT.Local_Storage_Login_Token, res.data.token);
+          localStorage.setItem(GLOBAL_CONSTANT.Local_Storage_Login_Token,  res.data.token);
           this.router.navigate(['/admin/client-list']);
         } else { 
           this.toastSrv.error(res.message);
